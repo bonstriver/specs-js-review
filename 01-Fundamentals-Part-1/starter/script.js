@@ -1,6 +1,8 @@
 // let js = 'amazing';
 // if (js === 'amazing') alert ('JS is fun!');
 
-
-console.log(20+3);
-console.log('B.Daniel Martinez')
+let firstName = `Brandon`
+let middleName = `Daniel`
+let lastName = `Martinez`
+let fullName = firstName+' '+middleName+' '+lastName
+console.log(fullName)

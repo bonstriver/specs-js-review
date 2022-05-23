@@ -105,10 +105,38 @@ const describePopulation = (country, population) => {
 
 // console.log(describePopulation(country, population))
 
+//CODING CHALLENGE 1
 
+const calcAvg = (x, y, z) => {
+    return (x + y + z) / 3
+}
 
+const scoreDolphins = calcAvg(85, 54, 41)
+const scoreKoalas = calcAvg(23, 34, 27)
 
+const checkWinner = (avgDolphins, avgKoalas) => {
+    if (avgDolphins / 2 >= avgKoalas){
+        return `Dolphins win ${avgDolphins}-${avgKoalas}`
+    }
+    else if (avgKoalas / 2 >= avgDolphins){
+        return `Koalas win ${avgKoalas}-${avgDolphins}`
+    }
+    else return "Nobody wins!"
+}
 
+// console.log(checkWinner(scoreDolphins, scoreKoalas))
 
+// INTRODUCTION TO ARRAYS
 
+populations = [1,2,3,4]
+console.log(populations.length == 4)
+
+const danny = {
+    firstName: 'Brandon',
+    lastName: 'Martinez',
+    nickName: "Danny",
+    friends: ['Corley', 'Justin', 'Leif', 'Matlock', 'Josh', 'Isaac'],
+    age: 2022-1999
+}
+console.log(`${danny.nickName} has ${danny.friends.length} friends, and his best friend is ${danny.friends[0]}`)
 

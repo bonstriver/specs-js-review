@@ -129,17 +129,28 @@ const checkWinner = (avgDolphins, avgKoalas) => {
 // INTRODUCTION TO ARRAYS
 
 populations = [1,2,3,4]
-console.log(populations.length == 4)
+// console.log(populations.length == 4)
 
 const danny = {
     firstName: 'Brandon',
     lastName: 'Martinez',
     nickName: 'Danny',
     friends: ['Corley', 'Justin', 'Leif', 'Matlock', 'Josh', 'Isaac'],
+    profession: 'developer',
     birthYear: 1999,
+    hasLicense: true,
     calcAge: function(){
-        return 2022 - this.birthYear
+        this.age = 2022 - this.birthYear
+        return this.age
+    },
+    summary: function(){
+        return `${this.nickName} is a ${this.calcAge()} year-old ${this.profession} who has ${this.hasLicense ? 'a' : 'no'} driver's license`
     }
 }
-console.log(`${danny.nickName} was born in ${danny.birthYear} and is ${danny.calcAge()} years old. He has ${danny.friends.length} friends, and his best friend is ${danny.friends[0]}`)
+
+// Challenge
+danny.calcAge()
+
+// console.log(`${danny.nickName} was born in ${danny.birthYear} and is currently ${danny.age} years old. He has ${danny.friends.length} friends, and his best friend is ${danny.friends[0]}`)
+console.log(danny.summary())
 

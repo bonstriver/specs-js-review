@@ -134,9 +134,10 @@ console.log(populations.length == 4)
 const danny = {
     firstName: 'Brandon',
     lastName: 'Martinez',
-    nickName: "Danny",
+    nickName: 'Danny',
     friends: ['Corley', 'Justin', 'Leif', 'Matlock', 'Josh', 'Isaac'],
-    age: 2022-1999
+    birthYear: 1999,
+    calcAge: birthYear => 2022 - birthYear
 }
-console.log(`${danny.nickName} has ${danny.friends.length} friends, and his best friend is ${danny.friends[0]}`)
+console.log(`${danny.nickName} was born in ${danny.birthYear} and is ${danny.calcAge(1999)} years old. He has ${danny.friends.length} friends, and his best friend is ${danny.friends[0]}`)
 

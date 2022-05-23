@@ -135,6 +135,7 @@ const danny = {
     firstName: 'Brandon',
     lastName: 'Martinez',
     nickName: 'Danny',
+    gender: 'male',
     friends: ['Corley', 'Justin', 'Leif', 'Matlock', 'Josh', 'Isaac'],
     profession: 'developer',
     birthYear: 1999,
@@ -144,7 +145,7 @@ const danny = {
         return this.age
     },
     summary: function(){
-        return `${this.nickName} is a ${this.calcAge()} year-old ${this.profession} who has ${this.hasLicense ? 'a' : 'no'} driver's license`
+        return `${this.nickName} is a ${this.calcAge()} year-old ${this.profession}, and ${this.gender == 'male' ? 'he' : 'she'} has ${this.hasLicense ? 'a' : 'no'} driver's license`
     }
 }
 
@@ -152,5 +153,31 @@ const danny = {
 danny.calcAge()
 
 // console.log(`${danny.nickName} was born in ${danny.birthYear} and is currently ${danny.age} years old. He has ${danny.friends.length} friends, and his best friend is ${danny.friends[0]}`)
-console.log(danny.summary())
+// console.log(danny.summary())
 
+// CODING CHALLENGE #3
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBmi: function(){
+        this.bmi = this.mass / this.height ** 2
+        return this.bmi
+    }
+}
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBmi: function(){
+        this.bmi = this.mass / this.height ** 2
+        return this.bmi
+    }
+}
+john.calcBmi()
+mark.calcBmi()
+
+console.log(`${john.bmi > mark.bmi 
+    ? `${john.fullName} is a certifiable dawg with a bmi of ${john.bmi}. ${mark.fullName} falls short with a bmi of ${mark.bmi}` 
+    : `${mark.fullName} is a certifiable dawg with a bmi of ${mark.bmi}. ${john.fullName} falls short with a bmi of ${john.bmi}`}`)

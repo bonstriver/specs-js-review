@@ -137,7 +137,9 @@ const danny = {
     nickName: 'Danny',
     friends: ['Corley', 'Justin', 'Leif', 'Matlock', 'Josh', 'Isaac'],
     birthYear: 1999,
-    calcAge: birthYear => 2022 - birthYear
+    calcAge: function(){
+        return 2022 - this.birthYear
+    }
 }
-console.log(`${danny.nickName} was born in ${danny.birthYear} and is ${danny.calcAge(1999)} years old. He has ${danny.friends.length} friends, and his best friend is ${danny.friends[0]}`)
+console.log(`${danny.nickName} was born in ${danny.birthYear} and is ${danny.calcAge()} years old. He has ${danny.friends.length} friends, and his best friend is ${danny.friends[0]}`)
 
